@@ -1,0 +1,227 @@
+.section2 {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.section2.dark {
+  background: linear-gradient(to bottom, #0f0f0f 0%, #1a1a1a 100%);
+}
+
+.tabs-container {
+  margin: 3rem 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.section2.dark .tab {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.section2.dark .tab::before {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+}
+
+.tab:hover::before,
+.tab.active::before {
+  left: 0;
+}
+
+.tab:hover,
+.tab.active {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(26, 71, 42, 0.3);
+}
+
+.section2.dark .tab:hover,
+.section2.dark .tab.active {
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.tab-content {
+  min-height: 400px;
+}
+
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.strength-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary-color);
+}
+
+.section2.dark .strength-card {
+  background: rgba(26, 26, 26, 0.95);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  border-top-color: var(--secondary-color);
+}
+
+.strength-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.strength-icon {
+  font-size: 3.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.strength-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.section2.dark .strength-card h3 {
+  color: var(--text-light);
+}
+
+.strength-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+.section2.dark .strength-card p {
+  color: #bbb;
+}
+
+.proof-section {
+  margin-top: 5rem;
+}
+
+.proof-section h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+
+.section2.dark .proof-section h3 {
+  color: var(--secondary-color);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.proof-item {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.section2.dark .proof-item {
+  background: rgba(26, 26, 26, 0.95);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.proof-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.proof-number {
+  position: absolute;
+  top: -20px;
+  left: 2.5rem;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  opacity: 0.2;
+  line-height: 1;
+}
+
+.section2.dark .proof-number {
+  color: var(--secondary-color);
+}
+
+.proof-item h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  margin-top: 1rem;
+}
+
+.section2.dark .proof-item h4 {
+  color: var(--text-light);
+}
+
+.proof-item p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.section2.dark .proof-item p {
+  color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .tab {
+    width: 100%;
+  }
+  
+  .strength-grid,
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+}

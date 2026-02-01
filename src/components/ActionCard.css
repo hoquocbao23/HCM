@@ -1,0 +1,137 @@
+.action-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.action-card.dark {
+  background: rgba(26, 26, 26, 0.95);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.action-card.selected {
+  border: 2px solid var(--card-color);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.card-icon-wrapper {
+  flex-shrink: 0;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.action-card.dark .card-title {
+  color: var(--text-light);
+}
+
+.expand-icon {
+  color: var(--card-color);
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.card-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.action-card.dark .card-description {
+  color: #bbb;
+}
+
+.card-details {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.action-card.dark .card-details {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.card-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-details li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.action-card.dark .card-details li {
+  color: #aaa;
+}
+
+.card-details li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--card-color);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .action-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .card-header {
+    flex-wrap: wrap;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+}

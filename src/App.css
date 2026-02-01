@@ -1,0 +1,13 @@
+.app {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.app.dark .section {
+  background-color: rgba(26, 26, 26, 0.9);
+}
