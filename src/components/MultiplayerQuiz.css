@@ -1,0 +1,365 @@
+.multiplayer-quiz {
+  min-height: 100vh;
+  padding: 6rem 2rem 4rem;
+  background: linear-gradient(to bottom, #f0f4f8 0%, #ffffff 100%);
+}
+
+.multiplayer-quiz.dark {
+  background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.multiplayer-quiz.dark .back-button {
+  background: rgba(26, 26, 26, 0.95);
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+  background: var(--primary-color);
+  color: white;
+}
+
+.multiplayer-quiz.dark .back-button:hover {
+  background: var(--secondary-color);
+}
+
+.multiplayer-lobby {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.multiplayer-quiz.dark .multiplayer-lobby {
+  background: rgba(26, 26, 26, 0.95);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.5);
+}
+
+.lobby-icon {
+  font-size: 4rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+.multiplayer-lobby h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.multiplayer-quiz.dark .multiplayer-lobby h2 {
+  color: var(--secondary-color);
+}
+
+.lobby-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.divider {
+  color: #666;
+  font-weight: 600;
+  position: relative;
+}
+
+.multiplayer-quiz.dark .divider {
+  color: #aaa;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+}
+
+.multiplayer-quiz.dark .divider::before,
+.multiplayer-quiz.dark .divider::after {
+  background: #555;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.join-section {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.room-code-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-align: center;
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  background: white;
+  color: var(--text-dark);
+  text-transform: uppercase;
+}
+
+.multiplayer-quiz.dark .room-code-input {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+.room-info {
+  text-align: left;
+}
+
+.room-code-display {
+  background: rgba(26, 71, 42, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.multiplayer-quiz.dark .room-code-display {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.room-code-display strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+  letter-spacing: 0.2em;
+}
+
+.multiplayer-quiz.dark .room-code-display strong {
+  color: var(--secondary-color);
+}
+
+.players-list {
+  margin-bottom: 2rem;
+}
+
+.players-list h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.multiplayer-quiz.dark .players-list h3 {
+  color: var(--text-light);
+}
+
+.player-item {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.multiplayer-quiz.dark .player-item {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-light);
+}
+
+.waiting-message {
+  color: #666;
+  font-style: italic;
+}
+
+.multiplayer-quiz.dark .waiting-message {
+  color: #aaa;
+}
+
+.multiplayer-game {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.multiplayer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.room-info-small {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.multiplayer-quiz.dark .room-info-small {
+  color: #aaa;
+}
+
+.multiplayer-stats {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.question-progress {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.multiplayer-quiz.dark .question-progress {
+  color: var(--secondary-color);
+}
+
+.multiplayer-results {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.multiplayer-quiz.dark .multiplayer-results {
+  background: rgba(26, 26, 26, 0.95);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.5);
+}
+
+.results-icon {
+  font-size: 4rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+.multiplayer-results h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.multiplayer-quiz.dark .multiplayer-results h2 {
+  color: var(--secondary-color);
+}
+
+.results-leaderboard {
+  margin-bottom: 2rem;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  border: 2px solid transparent;
+}
+
+.multiplayer-quiz.dark .result-item {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.result-item.self {
+  background: rgba(26, 71, 42, 0.2);
+  border-color: var(--primary-color);
+}
+
+.multiplayer-quiz.dark .result-item.self {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--secondary-color);
+}
+
+.result-item .rank {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  min-width: 50px;
+}
+
+.multiplayer-quiz.dark .result-item .rank {
+  color: var(--secondary-color);
+}
+
+.result-item .name {
+  flex: 1;
+  text-align: left;
+  margin-left: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.multiplayer-quiz.dark .result-item .name {
+  color: var(--text-light);
+}
+
+.result-item .score {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+.results-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .multiplayer-quiz {
+    padding: 4rem 1rem 2rem;
+  }
+  
+  .multiplayer-lobby,
+  .multiplayer-results {
+    padding: 2rem 1.5rem;
+  }
+  
+  .join-section {
+    flex-direction: column;
+  }
+  
+  .room-code-input {
+    width: 100%;
+  }
+}

@@ -1,26 +1,26 @@
-import React, { useState } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Section1 from './components/Section1'
-import Section2 from './components/Section2'
-import Section3 from './components/Section3'
-import Footer from './components/Footer'
-import DarkModeToggle from './components/DarkModeToggle'
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import QuizPage from './pages/QuizPage'
+import GamesPage from './pages/GamesPage'
+import ChatbotPage from './pages/ChatbotPage'
+import AIUsagePage from './pages/AIUsagePage'
 import './App.css'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
-
   return (
-    <div className={`app ${darkMode ? 'dark' : ''}`}>
-      <Navbar darkMode={darkMode} />
-      <Hero darkMode={darkMode} />
-      <Section1 darkMode={darkMode} />
-      <Section2 darkMode={darkMode} />
-      <Section3 darkMode={darkMode} />
-      <Footer darkMode={darkMode} />
-      <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="quiz" element={<QuizPage />} />
+          <Route path="games" element={<GamesPage />} />
+          <Route path="chatbot" element={<ChatbotPage />} />
+          <Route path="ai-usage" element={<AIUsagePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
