@@ -245,7 +245,16 @@ const Quiz = ({ darkMode }) => {
                 <button onClick={handleStart} className="btn-primary" disabled={!playerName.trim()}>
                   Bắt đầu Quiz
                 </button>
-                <button onClick={() => setShowMultiplayer(true)} className="btn-secondary">
+                <button 
+                  onClick={() => {
+                    if (!playerName.trim()) {
+                      return
+                    }
+                    setShowMultiplayer(true)
+                  }} 
+                  className="btn-secondary"
+                  disabled={!playerName.trim()}
+                >
                   Chơi cùng bạn bè
                 </button>
               </div>

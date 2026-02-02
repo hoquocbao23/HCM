@@ -105,7 +105,7 @@ const EnhancedAIBot = ({ darkMode }) => {
           <div className="header-icon">
             <FaRobot />
           </div>
-          <h1 className="page-title">Chatbot "Bác Hồ"</h1>
+          <h1 className="page-title">Tư tưởng Hồ Chí Minh về Đoàn kết Quốc tế</h1>
           <div className="section-divider"></div>
           <p className="section-intro">
             Chatbot được kiểm soát - Tất cả câu trả lời dựa trên tư tưởng Hồ Chí Minh

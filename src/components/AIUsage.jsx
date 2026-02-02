@@ -290,12 +290,7 @@ const AIUsage = ({ darkMode }) => {
                 tính học thuật và phù hợp của nội dung cuối cùng được trình bày.
               </li>
             </ul>
-            <div className="conclusion-box">
-              <p className="conclusion-quote">
-                "AI là công cụ hỗ trợ tìm kiếm và tóm tắt, không phải thay thế quá trình nghiên cứu và tư duy. 
-                Trách nhiệm kiểm chứng, biên tập và trích nguồn luôn thuộc về con người."
-              </p>
-            </div>
+            
           </div>
         </motion.div>
       </div>

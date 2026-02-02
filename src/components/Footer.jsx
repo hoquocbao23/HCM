@@ -35,9 +35,6 @@ const Footer = ({ darkMode }) => {
           <p>
             <FaGlobe /> Xây dựng hình ảnh Việt Nam là thành viên có trách nhiệm trong cộng đồng quốc tế
           </p>
-          <p className="footer-copyright">
-            © 2024 - Diễn đàn Nghị sĩ trẻ toàn cầu
-          </p>
         </div>
       </div>
     </footer>

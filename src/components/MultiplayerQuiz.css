@@ -204,6 +204,36 @@
   color: #aaa;
 }
 
+.host-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.waiting-players-message {
+  color: #f5576c;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.firebase-warning {
+  background: rgba(245, 87, 108, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #f5576c;
+  text-align: center;
+  margin: 0;
+  border: 1px solid rgba(245, 87, 108, 0.3);
+}
+
+.multiplayer-quiz.dark .firebase-warning {
+  background: rgba(245, 87, 108, 0.2);
+  color: #ff6b7d;
+}
+
 .multiplayer-game {
   max-width: 900px;
   margin: 0 auto;
